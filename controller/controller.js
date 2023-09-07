@@ -11,7 +11,7 @@ const taskone = async (req,res)=>{
     const returnobj = {
         "slack_name":"Oluwaseyi",
         "current_day": Current,
-        "utc_Time": formattedDate,
+        "utc_time": formattedDate,
         "track":"Backend",
         "github_file_url":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
         "github_repo_url":"https://github.com/Hydradaboss/NGX_taskone",
