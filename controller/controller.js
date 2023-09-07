@@ -7,11 +7,10 @@ const taskone = async (req,res)=>{
     var currentDayOfWeek = date.getDay();
     const Current = daysOfWeek[currentDayOfWeek]
     var currentDateUTCPlus2 = new Date(date.getTime() + 2 * 60 * 60 * 1000);
-    var formattedDate = currentDateUTCPlus2.toLocaleString("en-US",{timeZone:"UTC",  hour12: false });
     const returnobj = {
         "slack_name":"OlaniyiOluwaseyi",
         "current_day": Current,
-        "utc_time": formattedDate,
+        "utc_time": currentDateUTCPlus2,
         "track":"backend",
         "github_file_url":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
         "github_repo_url":"https://github.com/Hydradaboss/NGX_taskone",
