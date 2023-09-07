@@ -10,7 +10,7 @@ const taskone = async (req,res)=>{
     var formattedDate = currentDateUTCPlus2.toLocaleString("en-US",{timeZone:"UTC",  hour12: false });
     const returnobj = {
         "slack_name":"Oluwaseyi",
-        "Current_day": Current,
+        "current_day": Current,
         "utc_Time": formattedDate,
         "track":"Backend",
         "github_file_url":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
