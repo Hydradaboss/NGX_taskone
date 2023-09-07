@@ -9,7 +9,7 @@ const taskone = async (req,res)=>{
     var currentDateUTCPlus2 = new Date(date.getTime() + 2 * 60 * 60 * 1000);
     var formattedDate = currentDateUTCPlus2.toLocaleString("en-US",{timeZone:"UTC",  hour12: false });
     const returnobj = {
-        "slack_name":"Olaniyi Oluwaseyi",
+        "slack_name":"OlaniyiOluwaseyi",
         "current_day": Current,
         "utc_time": formattedDate,
         "track":"backend",
