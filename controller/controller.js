@@ -7,7 +7,7 @@ const taskone = async (req,res)=>{
     var currentDayOfWeek = date.getDay();
     const Current = daysOfWeek[currentDayOfWeek]
     var currentDateUTCPlus2 = new Date(date.getTime() + 2 * 60 * 60 * 1000);
-    var formattedDate = currentDateUTCPlus2.toLocaleString('en-US', {  hour12: false });
+    var formattedDate = currentDateUTCPlus2.toLocaleString("en-US",{timeZone:"UTC",  hour12: false });
     const returnobj = {
         "slackname":"Olaniyi Oluwaseyi",
         "Current day": Current,
