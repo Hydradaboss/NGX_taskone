@@ -9,21 +9,23 @@ const taskone = async (req,res)=>{
     var currentDateUTCPlus2 = new Date(date.getTime() + 2 * 60 * 60 * 1000);
     var formattedDate = currentDateUTCPlus2.toLocaleString('en-US', {  hour12: false });
     const returnobj = {
-        "slackname":"Backend Developer",
+        "slackname":"Olaniyi Oluwaseyi",
         "Current day": Current,
         "Utc Time": formattedDate,
         "track":"Backend",
-        "Github file repo": "",
-        "Github link":"",
+        "Github file repo":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
+        "Github link":"https://github.com/Hydradaboss/NGX_taskone",
         "Statuscode": "200"
     }
     try {
         const slack = req.query.slackname
+        console.log(slack)
         const track = req.query.track
-        if(slack != returnobj.slackname && track != returnobj.track){
+        if(slack !== returnobj.slackname || track !== returnobj.track){
+            console.log(returnobj.slackname)
             res.send("Wrong Query parameter")
-        }
-        res.send(returnobj)
+        }else{
+            res.send(returnobj)}
     } catch (error) {
         console.log(error)
     }
