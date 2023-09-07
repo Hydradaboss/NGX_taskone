@@ -19,10 +19,8 @@ const taskone = async (req,res)=>{
     }
     try {
         const slack = req.query.slackname
-        console.log(slack)
         const track = req.query.track
         if(slack !== returnobj.slackname || track !== returnobj.track){
-            console.log(returnobj.slackname)
             res.send("Wrong Query parameter")
         }else{
             res.send(returnobj)}
