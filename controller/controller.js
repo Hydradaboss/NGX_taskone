@@ -9,13 +9,13 @@ const taskone = async (req,res)=>{
     var currentDateUTCPlus2 = new Date(date.getTime() + 2 * 60 * 60 * 1000);
     var formattedDate = currentDateUTCPlus2.toLocaleString("en-US",{timeZone:"UTC",  hour12: false });
     const returnobj = {
-        "slackname":"Oluwaseyi",
-        "Current day": Current,
-        "Utc Time": formattedDate,
+        "slack_name":"Oluwaseyi",
+        "Current_day": Current,
+        "utc+Time": formattedDate,
         "track":"Backend",
-        "Github file repo":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
-        "Github link":"https://github.com/Hydradaboss/NGX_taskone",
-        "Statuscode": "200"
+        "github_file_url":"https://github.com/Hydradaboss/NGX_taskone/blob/main/app.js",
+        "github_repo_url":"https://github.com/Hydradaboss/NGX_taskone",
+        "status_code": 200
     }
     try {
         const slack = req.query.slackname
